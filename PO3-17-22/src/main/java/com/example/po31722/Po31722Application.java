@@ -32,9 +32,11 @@ public class Po31722Application {
         ChallengeTwo c2 = new ChallengeTwo(list1);
         System.out.println("stack: ");
         c2.printStack();
-        c2.push(5);
+        System.out.println("stack max: " + c2.findMax());
+        c2.push(11);
         System.out.println("pushed to stack");
         c2.printStack();
+
 
         System.out.println("stack max: " + c2.findMax());
 
