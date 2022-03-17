@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 @SpringBootApplication
@@ -15,7 +16,8 @@ public class Po3722Application {
         final int limit = 4000000;
         int i = 0;
         boolean flag = true;
-        List<Integer> evenFibs= new ArrayList();
+        List<Integer> evenFibs= new LinkedList();
+
         while(flag){
             i += 1;
             int temp = FibCalc.calculateFib(i);
@@ -24,7 +26,9 @@ public class Po3722Application {
             }
             else flag = false;
         }
+
         long sum = evenFibs.stream().mapToLong(Integer::longValue).sum();
+
         System.out.println("Sum of even fibonacci numbers less than 4,000,000: " + sum);
     }
 
