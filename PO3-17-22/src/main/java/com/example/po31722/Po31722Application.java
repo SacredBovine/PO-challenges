@@ -23,6 +23,8 @@ public class Po31722Application {
 
         list2.add(99);
         list2.add(1);
+        list2.add(33);
+        list2.add(23);
         list2.add(8);
         list2.add(10);
 
