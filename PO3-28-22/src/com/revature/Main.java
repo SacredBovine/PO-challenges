@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        final int numOfLockers = 144;
+        final int numOfLockers = 100;
         boolean[] doors = new boolean[numOfLockers];
 
         for (int step = 1; step <= numOfLockers; step += 1){
