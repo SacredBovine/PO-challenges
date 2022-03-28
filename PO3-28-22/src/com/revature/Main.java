@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         final int numOfLockers = 100;
-        boolean[] doors = new boolean[numOfLockers];
+       /* boolean[] doors = new boolean[numOfLockers];
 
-        for (int step = 1; step <= numOfLockers; step += 1){
+        /*for (int step = 1; step <= numOfLockers; step += 1){
             for (int locker = step - 1; locker < numOfLockers; locker += step){
                 doors[locker] = !doors[locker];
             }
@@ -22,8 +22,8 @@ public class Main {
                 count++;
             }
             lockerNumber++;
-        }
-        System.out.println("There are " + count +" open lockers.");
+        }*/
+        System.out.println("There are " + (int) Math.sqrt(numOfLockers) +" open lockers.");
         // the step between open doors increases by 2 each open door in the case that step += 1
         // Can this be generalized to step constraints?
         //      stepping by 2 gets all funky, maybe not generalizable
