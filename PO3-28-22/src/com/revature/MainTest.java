@@ -19,7 +19,6 @@ class MainTest {
     @Test
     void solutionsMatchTest() {
         for (int testCase = 1; testCase <= maxIntVal; testCase++){
-            System.out.println(testCase);
             assertEquals(main.programmaticSolution(testCase), main.mathematicalSolution(testCase));
         }
     }
