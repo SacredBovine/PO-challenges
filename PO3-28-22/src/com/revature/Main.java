@@ -24,8 +24,7 @@ public class Main {
         System.out.println("case : Number of lockers = " + numOfLockers);
         System.out.println("Programmatic solution: There are " + count + " open lockers.");
         System.out.println("Mathematical solution: There are " + (int) Math.sqrt(numOfLockers) +" open lockers.");
-
-        // the step between open doors increases by 2 each open door in the case that step += 1
+        
         // Can this be generalized to step constraints?
         //      stepping by 2 gets all funky, maybe not generalizable
         //      stepping by 3 is even more funky.
