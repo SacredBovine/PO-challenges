@@ -46,7 +46,7 @@ public class Main {
     // 144-168 -> 12 open lockers
     // # open lockers -> integer value of sqrt(numOfLockers)
     //
-    // created test to compare both functions, I ran it from 1 - 1,000,00 at passed.
+    // created test to compare both functions, I ran it from 1 - 1,000,00 and passed.
     // Wouldn't recommend as that took 2 hours.
 
 }
