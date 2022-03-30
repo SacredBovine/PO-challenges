@@ -18,13 +18,13 @@ public class Main {
         }
 
         int count = 0;
-        for(boolean out: doors) if(out) count++;
+        for(boolean isOpen: doors) if(isOpen) count++;
 
         System.out.println();
         System.out.println("case : Number of lockers = " + numOfLockers);
         System.out.println("Programmatic solution: There are " + count + " open lockers.");
         System.out.println("Mathematical solution: There are " + (int) Math.sqrt(numOfLockers) +" open lockers.");
-        
+
         // Can this be generalized to step constraints?
         //      stepping by 2 gets all funky, maybe not generalizable
         //      stepping by 3 is even more funky.
