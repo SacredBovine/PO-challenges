@@ -1,5 +1,7 @@
 package com.revature;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static int programmaticSolution(int numOfLockers){
