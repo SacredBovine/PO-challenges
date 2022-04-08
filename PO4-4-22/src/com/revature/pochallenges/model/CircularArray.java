@@ -89,14 +89,4 @@ public class CircularArray<T> implements Iterator<T>{
         }
         else throw new NoSuchElementException();
     }
-
-    @Override
-    public void remove() {
-        
-    }
-
-    @Override
-    public void forEachRemaining(Consumer<? super T> action) {
-
-    }
 }
