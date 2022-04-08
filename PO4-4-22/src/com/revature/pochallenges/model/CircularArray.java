@@ -67,7 +67,7 @@ public class CircularArray<T> implements Iterator<T>{
         StringBuilder ret = new StringBuilder();
         ret.append('[');
         while(!complete){
-            ret.append(array[cur]);
+            ret.append(array[cur].toString());
             cur++;
             if (cur >= size){
                 cur = 0;
