@@ -66,10 +66,10 @@ public class CircularArray<T> implements Iterator<T>{
         int cur = headIndex;
         StringBuilder ret = new StringBuilder();
         ret.append('[');
-        while(!complete){
+        while(!complete) {
             ret.append(array[cur].toString());
             cur++;
-            if (cur >= size){
+            if (cur >= size) {
                 cur = 0;
             }
             if(cur == headIndex) {
