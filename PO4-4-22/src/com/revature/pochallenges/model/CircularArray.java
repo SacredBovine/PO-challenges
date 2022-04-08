@@ -43,7 +43,8 @@ public class CircularArray<T> implements Iterator<T>{
     }
 
     // Current implementation resets iterator upon rotation
-    public void rotateLeft(){
+    public void rotateLeft() throws IllegalStateException{
+        if(size == 0) throw new IllegalStateException();
         if(headIndex < size - 1) headIndex++;
         else headIndex = 0;
         if(headIndex == 0) currentIndex = size - 1;
@@ -51,7 +52,8 @@ public class CircularArray<T> implements Iterator<T>{
     }
 
     // Current implementation resets iterator upon rotation
-    public void rotateRight(){
+    public void rotateRight() throws IllegalStateException{
+        if(size == 0) throw new IllegalStateException();
         if(headIndex > 0) headIndex--;
         else headIndex = size - 1;
         if(headIndex == 0) currentIndex = size - 1;
@@ -83,7 +85,7 @@ public class CircularArray<T> implements Iterator<T>{
         if (size > 0) return true;
         else return false;
     }
-    
+
     @Override
     public T next() throws NoSuchElementException {
         if (this.hasNext()) {

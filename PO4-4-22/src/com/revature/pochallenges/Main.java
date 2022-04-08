@@ -26,7 +26,7 @@ public class Main {
         System.out.println("get index '4': " + array2.get(4));
         array2.set(3, "foo");
 
-        System.out.println(array2.toString());
+        System.out.println("Set index 3 to \"foo\": " + array2.toString());
 
         for (int i = 0; i < 25; i++){
             System.out.println(array2.next());
