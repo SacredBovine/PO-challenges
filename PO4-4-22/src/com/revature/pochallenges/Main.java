@@ -7,23 +7,31 @@ public class Main {
     public static void main(String[] args){
         Integer[] intTest = {1,2,3,4,5};
         String[] stringTest = {"a","b","c","d","e"};
-        CircularArray<Integer> array = new CircularArray(intTest);
+        CircularArray<Integer> array1 = new CircularArray(intTest);
 
-        System.out.println("initial array: "+ array.toString());
-        array.rotateRight();
-        System.out.println("rotate right: " + array.toString());
-        array.rotateRight();
-        System.out.println("rotate right: " + array.toString());
+        System.out.println("initial array: "+ array1.toString());
+        array1.rotateRight();
+        System.out.println("rotate right: " + array1.toString());
+        array1.rotateRight();
+        System.out.println("rotate right: " + array1.toString());
 
-        array = new CircularArray(stringTest);
-        System.out.println("initial array: "+ array.toString());
-        array.rotateLeft();
-        System.out.println("rotate left: " + array.toString());
-        array.rotateLeft();
-        System.out.println("rotate left: " + array.toString());
+        CircularArray<String> array2 = new CircularArray(stringTest);
+        System.out.println("initial array: "+ array2.toString());
+        array2.rotateLeft();
+        System.out.println("rotate left: " + array2.toString());
+        array2.rotateLeft();
+        System.out.println("rotate left: " + array2.toString());
+        System.out.println("get index '0': " + array2.get(0));
+        System.out.println("get index '3': " + array2.get(3));
+        System.out.println("get index '4': " + array2.get(4));
+        array2.set(3, "foo");
+
+        System.out.println(array2.toString());
 
         for (int i = 0; i < 25; i++){
-            System.out.println(array.next());
+            System.out.println(array2.next());
         }
+
+
     }
 }

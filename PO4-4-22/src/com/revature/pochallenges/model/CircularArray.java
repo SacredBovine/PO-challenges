@@ -1,6 +1,7 @@
 package com.revature.pochallenges.model;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.function.Consumer;
 
 public class CircularArray<T> implements Iterator<T>{
@@ -29,15 +30,15 @@ public class CircularArray<T> implements Iterator<T>{
         if(index >= size) throw new ArrayIndexOutOfBoundsException();
         else {
             if(index + headIndex < size - 1) return array[index + headIndex];
-            else return array[index + headIndex - size - 1];
+            else return array[index + headIndex - size];
         }
     }
 
-    public void set(T element, int index) throws ArrayIndexOutOfBoundsException{
+    public void set(int index, T element) throws ArrayIndexOutOfBoundsException{
         if(index >= size) throw new ArrayIndexOutOfBoundsException();
         else {
             if(index + headIndex < size - 1) array[index + headIndex] = element;
-            else array[index + headIndex - size - 1] = element;
+            else array[index + headIndex - size] = element;
         }
     }
 
@@ -80,22 +81,22 @@ public class CircularArray<T> implements Iterator<T>{
 
 
     @Override
-    public T next() {
+    public T next() throws NoSuchElementException {
         if (this.hasNext()) {
             if (currentIndex == size - 1) currentIndex = 0;
             else currentIndex++;
             return array[currentIndex];
         }
-        else return null; // should probably throw an exception, don't know which one yet though.
+        else throw new NoSuchElementException();
     }
 
     @Override
     public void remove() {
-        Iterator.super.remove(); // Will implement at a later date
+        
     }
 
     @Override
     public void forEachRemaining(Consumer<? super T> action) {
-        Iterator.super.forEachRemaining(action); // will implement at a later date.
+
     }
 }
