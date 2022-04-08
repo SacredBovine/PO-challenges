@@ -9,6 +9,7 @@ public class CircularArray<T> implements Iterator<T>{
     private T[] array;
     private int headIndex;
     private int size;
+    // For iterator use only
     private int currentIndex;
 
     public CircularArray(T[] array) {
