@@ -26,7 +26,7 @@ public class CircularArray<T> implements Iterator<T>{
 
     public int length(){ return size; }
 
-    // Chose to throw exception to enforce the size of the array
+    // Chose to throw an ArrayIndexOutOfBoundsException in order to enforce the size of the array
     public T get(int index) throws ArrayIndexOutOfBoundsException{
         if(index >= size) throw new ArrayIndexOutOfBoundsException();
         else {
@@ -35,7 +35,7 @@ public class CircularArray<T> implements Iterator<T>{
         }
     }
 
-    // Chose to throw exception to enforce the size of the array
+    // Chose to throw an ArrayIndexOutOfBoundsException in order to enforce the size of the array
     public void set(int index, T element) throws ArrayIndexOutOfBoundsException{
         if(index >= size) throw new ArrayIndexOutOfBoundsException();
         else {
