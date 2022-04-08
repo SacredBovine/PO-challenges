@@ -74,12 +74,12 @@ public class CircularArray<T> implements Iterator<T>{
         }
         return ret.toString();
     }
+    
     @Override
     public boolean hasNext() {
         if (size > 0) return true;
         else return false;
     }
-
 
     @Override
     public T next() throws NoSuchElementException {
