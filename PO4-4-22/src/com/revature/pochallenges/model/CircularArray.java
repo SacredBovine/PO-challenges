@@ -42,12 +42,14 @@ public class CircularArray<T> implements Iterator<T>{
         }
     }
 
+    // Current implementation resets iterator
     public void rotateLeft(){
         if(headIndex < size - 1) headIndex++;
         else headIndex = 0;
         currentIndex = headIndex;
     }
 
+    // Current implementation resets iterator
     public void rotateRight(){
         if(headIndex > 0) headIndex--;
         else headIndex = size - 1;
@@ -80,6 +82,7 @@ public class CircularArray<T> implements Iterator<T>{
         else return false;
     }
 
+    // Known issue, will always start returning the element after the head. Still thinking of solution.
     @Override
     public T next() throws NoSuchElementException {
         if (this.hasNext()) {
