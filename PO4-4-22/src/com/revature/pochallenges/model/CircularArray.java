@@ -2,7 +2,6 @@ package com.revature.pochallenges.model;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.function.Consumer;
 
 public class CircularArray<T> implements Iterator<T>{
 
@@ -74,7 +73,7 @@ public class CircularArray<T> implements Iterator<T>{
         }
         return ret.toString();
     }
-    
+
     @Override
     public boolean hasNext() {
         if (size > 0) return true;
