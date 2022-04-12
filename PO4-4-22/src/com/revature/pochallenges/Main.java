@@ -29,8 +29,8 @@ public class Main {
         System.out.println("get index 3: " + array2.get(3));
         System.out.println("get index 4: " + array2.get(4));
 
-        array2.set(3, "foo");
-        System.out.println("Set index 3 to = \"foo\": " + array2);
+        array2.set(4, "foo");
+        System.out.println("Set index 4 to = \"foo\": " + array2);
         System.out.println();
         System.out.println("demonstration of circular iteration:");
         for (int i = 0; i < 25; i++){
