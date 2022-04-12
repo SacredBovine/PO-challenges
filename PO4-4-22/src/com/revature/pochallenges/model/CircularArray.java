@@ -30,7 +30,7 @@ public class CircularArray<T> implements Iterator<T>{
     public T get(int index) throws ArrayIndexOutOfBoundsException{
         if(index >= size) throw new ArrayIndexOutOfBoundsException();
         else {
-            if(index + headIndex < size - 1) return array[index + headIndex];
+            if(index + headIndex <= size - 1) return array[index + headIndex];
             else return array[index + headIndex - size];
         }
     }
@@ -39,7 +39,7 @@ public class CircularArray<T> implements Iterator<T>{
     public void set(int index, T element) throws ArrayIndexOutOfBoundsException{
         if(index >= size) throw new ArrayIndexOutOfBoundsException();
         else {
-            if(index + headIndex < size - 1) array[index + headIndex] = element;
+            if(index + headIndex <= size - 1) array[index + headIndex] = element;
             else array[index + headIndex - size] = element;
         }
     }
@@ -54,10 +54,28 @@ public class CircularArray<T> implements Iterator<T>{
     }
 
     // Current implementation resets iterator upon rotation
+    public void rotateLeft(int amount) throws IllegalStateException{
+        if(size == 0) throw new IllegalStateException();
+        if(headIndex + amount < size - 1) headIndex += amount;
+        else headIndex = size - headIndex - amount;
+        if(headIndex == 0) currentIndex = size - 1;
+        else currentIndex = headIndex - 1;
+    }
+
+    // Current implementation resets iterator upon rotation
     public void rotateRight() throws IllegalStateException{
         if(size == 0) throw new IllegalStateException();
         if(headIndex > 0) headIndex--;
         else headIndex = size - 1;
+        if(headIndex == 0) currentIndex = size - 1;
+        else currentIndex = headIndex - 1;
+    }
+
+    // Current implementation resets iterator upon rotation
+    public void rotateRight(int amount) throws IllegalStateException{
+        if(size == 0) throw new IllegalStateException();
+        if(headIndex - amount >= 0) headIndex -= amount;
+        else headIndex = size + headIndex - amount;
         if(headIndex == 0) currentIndex = size - 1;
         else currentIndex = headIndex - 1;
     }

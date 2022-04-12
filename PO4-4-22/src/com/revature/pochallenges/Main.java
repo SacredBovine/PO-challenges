@@ -14,6 +14,8 @@ public class Main {
         System.out.println("rotate right: " + array1);
         array1.rotateRight();
         System.out.println("rotate right: " + array1);
+        array1.rotateRight(3);
+        System.out.println("rotate right 3: " + array1);
 
         CircularArray<String> array2 = new CircularArray(stringTest);
         System.out.println("initial array: "+ array2);
@@ -21,6 +23,8 @@ public class Main {
         System.out.println("rotate left: " + array2);
         array2.rotateLeft();
         System.out.println("rotate left: " + array2);
+        array2.rotateLeft(3);
+        System.out.println("rotate left 3: " + array2);
         System.out.println("get index 0: " + array2.get(0));
         System.out.println("get index 3: " + array2.get(3));
         System.out.println("get index 4: " + array2.get(4));
