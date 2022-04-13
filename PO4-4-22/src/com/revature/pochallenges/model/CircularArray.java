@@ -14,8 +14,9 @@ public class CircularArray<T> implements Iterator<T>{
     public CircularArray(T[] array) {
         this.array = array;
         headIndex = 0;
-        currentIndex = size - 1;
         size = array.length;
+        currentIndex = size - 1;
+
     }
     public CircularArray(){
         super();
