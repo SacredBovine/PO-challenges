@@ -33,6 +33,7 @@ public class Main {
         System.out.println("Set index 4 to = \"foo\": " + array2);
         System.out.println();
         System.out.println("demonstration of circular iteration:");
+
         for (int i = 0; i < 25; i++){
             System.out.println(array2.next());
         }
