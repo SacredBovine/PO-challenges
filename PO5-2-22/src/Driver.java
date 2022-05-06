@@ -20,6 +20,11 @@ public class Driver {
         LLNode<Integer> node4 = new LLNode<>(4);
         LLNode<Integer> node5 = new LLNode<>(5);
         LLNode<Integer> node6 = new LLNode<>(6);
+        LLNode<Integer> node7 = new LLNode<>(7);
+        LLNode<Integer> node8 = new LLNode<>(8);
+        LLNode<Integer> node9= new LLNode<>(9);
+
+
 
         list1.append(node1);
         list1.append(node2);
@@ -27,6 +32,9 @@ public class Driver {
         list1.append(node4);
         list1.append(node5);
         list1.append(node6);
+        list2.append(node7);
+        list2.append(node8);
+        list2.append(node9);
         list2.append(node3);
         list2.append(node4);
         list2.append(node5);
